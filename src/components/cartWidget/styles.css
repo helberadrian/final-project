@@ -1,0 +1,14 @@
+.shopping-cart {
+    display: flex;
+    flex-direction: row;
+    align-items: initial;
+}
+
+.shopping-cart img {
+    height: 3rem;
+    padding: 0.5rem;
+}
+
+.shopping-cart p {
+    color: white;
+}

@@ -1,0 +1,31 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+.navbar img {
+    height: 5rem;
+    padding: 0.5rem;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li {
+    padding: 0.5rem;
+}
+
+.menu li Link{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}
