@@ -2,19 +2,12 @@ import React from "react";
 import './styles.css';
 
 const ItemDetailContainer = ({data}) => {
-
-    const info = {
-        "name": data.name,
-        "color": data.data.color,
-        "capacity": data.data.capacity
-    }
-
-    console.log(info);
     return (
         <div className="productBox">
-            <p>{info.name}</p>
-            <p>{info.color}</p>
-            <p>{info.capacity}</p>
+            <p>{data.name}</p>
+            <p>{data.color}</p>
+            <p>{data.capacity}</p>
+            <p>{data.memory}</p>
         </div>
     );
 };

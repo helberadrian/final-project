@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
 
 import ItemDetailContainer from "../../components/itemDetailContainer/index"
+
+// Firebase
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../db/config"
 
 const Product = () => {
     const [product, setProduct] = useState({});
@@ -10,9 +13,19 @@ const Product = () => {
     const id = useParams();
 
     useEffect(() => {
-        axios(`https://api.restful-api.dev/objects/${id.productId}`).then((res) =>
-        setProduct(res.data)
-        );
+        const getProduct = async () => {
+            console.log("Entro");
+            const docRef = doc(db, "product", "1");
+            const docSnap = await getDoc(docRef);
+            console.log(docSnap);
+
+            if (docSnap.exists()) {
+                console.log("Entro al if");
+                setProduct({id: docSnap.id, ...docSnap.data()});
+                console.log(product);
+            }
+        };
+        getProduct();
     }, [id]);
 
     return (
