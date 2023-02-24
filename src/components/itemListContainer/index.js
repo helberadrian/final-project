@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
+
+// Firebase
+import { collection, query, getDocs } from "firebase/firestore";
+import { db } from "../../db/config"
 
 import ItemDetailContainer from "../itemDetailContainer/index"
 import './styles.css';
@@ -9,9 +12,16 @@ const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        axios("https://api.restful-api.dev/objects").then((res) =>
-        setProducts(res.data)
-        );
+        const getProducts = async () => {
+            const q = query(collection(db, 'products'));
+            const querySnapshot = await getDocs(q);
+            const docs = [];
+            querySnapshot.forEach((doc) => {
+                docs.push({...doc.data(), id: doc.id});
+            });
+            setProducts(docs);
+        };
+        getProducts();
     }, []);
 
     return (
