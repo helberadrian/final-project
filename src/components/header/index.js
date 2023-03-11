@@ -5,7 +5,7 @@ import logo from './media/logo.png';
 
 import CartWidget from '../cartWidget/index';
 
-const NavBar = () => {
+const Header = () => {
     return (
         <nav className="navbar">
             <img src={logo} alt="Logo"/>
@@ -14,10 +14,13 @@ const NavBar = () => {
                     <Link to="/">Inicio</Link>
                 </li>
                 <li>
-                    <Link to="/category">Categoria</Link>
+                    <Link to="/categories/:category">Categorias</Link>
                 </li>
                 <li>
                     <Link to="/contact">Contacto</Link>
+                </li>
+                <li>
+                    <Link to="/register">Registro</Link>
                 </li>
             </ul>
             <CartWidget number={0}></CartWidget>
@@ -25,4 +28,4 @@ const NavBar = () => {
     );
 }
 
-export default NavBar;
+export default Header;
