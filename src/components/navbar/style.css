@@ -1,3 +1,19 @@
-.fa-cart-shopping {
-	margin-right: 5px;
+.navBar {
+	display: flex;
+	flex-direction: row;
+	padding: 0.5rem;
+	justify-content: space-around;
+}
+
+.navBar a {
+	text-decoration: none;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	font-size: 1.5rem;
+	padding: 1rem;
+}
+
+.navBar a:hover {
+	color: #8395a7;
 }

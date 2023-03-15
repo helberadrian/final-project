@@ -6,8 +6,19 @@ import { collection, query, getDocs } from "firebase/firestore";
 import { db } from "../../db/config"
 
 import CardProduct from "../cardProduct/index";
+import ButtonDetail from "../buttonDetail";
+import ButtonShop from "../buttonShop";
 
 import './styles.css';
+
+const styles = {
+    linkButton: {
+      textDecoration: "none",
+      color: "white",
+      fontSize: 18,
+      fontWeight: "bold",
+    },
+  };
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
@@ -30,9 +41,18 @@ const ItemListContainer = () => {
         <div className="productList">
         {products.map((product) => {
             return (
-                <Link to={`/product/${product.id}`}>
+                <div className="productContainer">
                     <CardProduct key={product.id} data={product} />
-                </Link>
+                    <div className="buttonContainer">
+                        <Link to={`/product/${product.id}`} style={styles.linkButton}>
+                            <ButtonDetail key={product.id} data={product} />
+                        </Link>
+                        <Link to={`/add/${product.id}`} style={styles.linkButton}>
+                            <ButtonShop key={product.id} data={product} />
+                        </Link>
+                    </div>
+                    
+                </div> 
             );
         })}
         </div>

@@ -8,10 +8,6 @@
     justify-content: center;
 }
 
-.card:hover {
-    background-color: #c8d6e5;
-}
-
 .title {
     font-family: 'Roboto', sans-serif;
     font-size: 25px;

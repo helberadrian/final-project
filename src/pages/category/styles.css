@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 15rem;
+    margin: 2rem;
+    border: solid black 2px;
+    border-radius: 10%;
+    margin: 2rem;
+}
+
+.category a {
+    text-decoration: none;
+}
+
+.category:hover {
+    background-color: #c8d6e5;
+}
+
+.category img {
+    height: 10rem;
+    margin: 1rem;
+}
+
+.category p {
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+}

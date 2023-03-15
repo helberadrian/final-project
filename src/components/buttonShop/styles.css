@@ -1,0 +1,12 @@
+.button {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.5rem;
+    background-color: #222f3e;
+    color: white;
+    text-align: center;
+    width: 8rem;
+}
+
+.button:hover {
+    background-color: #8395a7;
+}

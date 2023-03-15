@@ -21,7 +21,6 @@ const CategoryMenu = () => {
       color: "white",
       fontSize: 18,
       fontWeight: "bold",
-      textTransform: "lowercase",
     },
     upperText: {
       textTransform: "uppercase",
@@ -43,7 +42,7 @@ const CategoryMenu = () => {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        <span style={styles.upperText}></span>Categorias
+        <p>Categorias</p>
       </Button>
       <Menu
         id="basic-menu"
