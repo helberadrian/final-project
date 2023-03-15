@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import { collection, query, getDocs } from "firebase/firestore";
 import { db } from "../../db/config"
 
-import ItemDetailContainer from "../itemDetailContainer/index"
+import CardProduct from "../cardProduct/index";
+
 import './styles.css';
 
 const ItemListContainer = () => {
@@ -19,6 +20,7 @@ const ItemListContainer = () => {
             querySnapshot.forEach((doc) => {
                 docs.push({...doc.data(), id: doc.id});
             });
+            console.log(docs);
             setProducts(docs);
         };
         getProducts();
@@ -29,7 +31,7 @@ const ItemListContainer = () => {
         {products.map((product) => {
             return (
                 <Link to={`/product/${product.id}`}>
-                    <ItemDetailContainer key={product.id} data={product} />
+                    <CardProduct key={product.id} data={product} />
                 </Link>
             );
         })}

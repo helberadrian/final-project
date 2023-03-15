@@ -1,0 +1,38 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    margin: 1rem;
+    width: 28rem;
+    height: 18rem;
+    justify-content: center;
+}
+
+.card:hover {
+    background-color: #c8d6e5;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.subtext {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: grey;
+}

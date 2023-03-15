@@ -43,7 +43,7 @@ const CategoryMenu = () => {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        <span style={styles.upperText}>M</span>Categorias
+        <span style={styles.upperText}></span>Categorias
       </Button>
       <Menu
         id="basic-menu"

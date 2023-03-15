@@ -9,7 +9,6 @@ import Header from './components/header';
 import Home from "./pages/home/index";
 import Category from "./pages/category/index";
 import Product from "./pages/product/index";
-import About from './pages/about';
 import Contact from "./pages/contact";
 import ShoppingCart from "./pages/cart";
 import Register from './pages/register';
@@ -23,7 +22,6 @@ class App extends Component {
           <Header />
           <Routes>
               <Route path='/' element={<Home />} />
-              <Route path='/about' element={<About />} />
               <Route path='/contact' element={<Contact />} />
               <Route path='/register' element={<Register />} />
               <Route path='/cart' element={<ShoppingCart />} />

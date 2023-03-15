@@ -1,37 +1,32 @@
 import * as React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import CardActionArea from "@mui/material/CardActionArea";
+
+import './styles.css';
 
 const CardProduct = ({ data }) => {
   return (
-    <Card sx={{ maxWidth: 345, m: 4 }}>
-      <CardActionArea>
-        <CardMedia component="img" image={data.img} alt="green iguana" />
-        <CardContent>
-          <Typography gutterBottom variant="h4" component="div">
-            {data.name}
-          </Typography>
-          <Typography gutterBottom variant="h4" component="div">
-            {data.manufacturer}
-          </Typography>
-          <Typography gutterBottom variant="h5" component="div">
-            {data.capacity}
-          </Typography>
-          <Typography gutterBottom variant="h5" component="div">
-            {data.memory}
-          </Typography>
-          <Typography gutterBottom variant="h5" component="div">
-            {data.color}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            $ {data.price} | stock: {data.stock}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <div className="card">
+      <img src={data.img} alt="Imagen de Producto"/>
+      <div>
+        <div className="title">
+          {data.name}
+        </div>
+        <div className="subtitle">
+          {data.manufacturer}
+        </div>
+        <div className="text">
+          Capacidad: {data.capacity}
+        </div>
+        <div className="text">
+          Memoria RAM: {data.memory}
+        </div>
+        <div className="text">
+          Color: {data.color}
+        </div>
+        <div className="subtext">
+          ${data.price} | stock: {data.stock}
+        </div>
+      </div>
+    </div>
   );
 };
 
