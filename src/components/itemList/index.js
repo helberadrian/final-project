@@ -31,7 +31,6 @@ const ItemListContainer = () => {
             querySnapshot.forEach((doc) => {
                 docs.push({...doc.data(), id: doc.id});
             });
-            console.log(docs);
             setProducts(docs);
         };
         getProducts();
@@ -44,11 +43,11 @@ const ItemListContainer = () => {
                 <div className="productContainer">
                     <CardProduct key={product.id} data={product} />
                     <div className="buttonContainer">
-                        <Link to={`/product/${product.id}`} style={styles.linkButton}>
+                        <Link to={`/details/${product.id}`} style={styles.linkButton}>
                             <ButtonDetail key={product.id} data={product} />
                         </Link>
                         <Link to={`/add/${product.id}`} style={styles.linkButton}>
-                            <ButtonShop key={product.id} data={product} />
+                            <ButtonShop key={product.id} data={product} id={product.id} />
                         </Link>
                     </div>
                     

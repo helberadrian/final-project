@@ -3,6 +3,8 @@ import * as React from "react";
 import './styles.css';
 
 const CardProduct = ({ data }) => {
+  const manufacturer = data.manufacturer.toUpperCase();
+
   return (
     <div className="card">
       <img src={data.img} alt="Imagen de Producto"/>
@@ -11,7 +13,7 @@ const CardProduct = ({ data }) => {
           {data.name}
         </div>
         <div className="subtitle">
-          {data.manufacturer}
+          {manufacturer}
         </div>
         <div className="text">
           Capacidad: {data.capacity}

@@ -12,6 +12,7 @@ import Product from "./pages/product/index";
 import Contact from "./pages/contact";
 import ShoppingCart from "./pages/cart";
 import Register from './pages/register';
+import CategoryDetail from './pages/categoryDetail';
 
 
 class App extends Component {
@@ -27,6 +28,7 @@ class App extends Component {
               <Route path='/cart' element={<ShoppingCart />} />
               <Route path='/details/:id' element={<Product />} />
               <Route path='/category/' element={<Category />} />
+              <Route path='/category/:id' element={<CategoryDetail />} />
           </Routes>
         </div>
       </Router>

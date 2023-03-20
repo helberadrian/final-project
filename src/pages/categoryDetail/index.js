@@ -9,14 +9,15 @@ import './styles.css';
 import { collection, documentId, where, getDocs, query } from "firebase/firestore";
 import { db } from "../../db/config"
 
-const Product = () => {
+const CategoryDetail = () => {
     const [product, setProduct] = useState([]);
 
     const { id } = useParams();
+    console.log(id);
 
     useEffect(() => {
         const getProducts = async () => {
-          const q = query(collection(db, "products"), where(documentId(), "==", id));
+          const q = query(collection(db, "products"), where("manufacturer", "==", id));
           const docs = [];
           const querySnapshot = await getDocs(q);
           querySnapshot.forEach((doc) => {
@@ -28,7 +29,7 @@ const Product = () => {
       }, [id]);
 
     return (
-        <div className="productDetail">
+        <div className="categoryDetail">
             {product.map((data) => {
                 return (<CardProduct data={data} key={data.id}/>)
                 })
@@ -37,4 +38,4 @@ const Product = () => {
     );
 };
 
-export default Product;
+export default CategoryDetail;
