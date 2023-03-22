@@ -6,7 +6,7 @@ import CardProduct from "../../components/cardProduct";
 import './styles.css';
 
 // Firebase
-import { collection, documentId, where, getDocs, query } from "firebase/firestore";
+import { collection, where, getDocs, query } from "firebase/firestore";
 import { db } from "../../db/config"
 
 const CategoryDetail = () => {
