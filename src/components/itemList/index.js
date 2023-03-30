@@ -22,6 +22,7 @@ const styles = {
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
+    
 
     useEffect(() => {
         const getProducts = async () => {
@@ -59,3 +60,7 @@ const ItemListContainer = () => {
 };
 
 export default ItemListContainer;
+
+// <ButtonShop key={product.id} data={product} id={product.id} />
+
+// to={`/add/${product.id}`}

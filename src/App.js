@@ -13,24 +13,25 @@ import Contact from "./pages/contact";
 import ShoppingCart from "./pages/cart";
 import Register from './pages/register';
 import CategoryDetail from './pages/categoryDetail';
-
+import AddProduct from './pages/addProduct';
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
-          <Header />
-          <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/contact' element={<Contact />} />
-              <Route path='/register' element={<Register />} />
-              <Route path='/cart' element={<ShoppingCart />} />
-              <Route path='/details/:id' element={<Product />} />
-              <Route path='/category/' element={<Category />} />
-              <Route path='/category/:id' element={<CategoryDetail />} />
-          </Routes>
-        </div>
+          <div className="App">
+            <Header />
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/contact' element={<Contact />} />
+                <Route path='/register' element={<Register />} />
+                <Route path='/cart' element={<ShoppingCart />} />
+                <Route path='/details/:id' element={<Product />} />
+                <Route path='/category/' element={<Category />} />
+                <Route path='/category/:id' element={<CategoryDetail />} />
+                <Route path='/add/:id' element={<AddProduct />} />
+            </Routes>
+          </div>
       </Router>
     );
   }

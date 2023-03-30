@@ -1,12 +1,28 @@
 import React from 'react';
-import './styles.css';
-import cart from './media/shopping-cart.png'
+import { Link } from "react-router-dom";
 
-const CartWidget = ({number}) => {
+import './styles.css';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+const styles = {
+    linkButton: {
+      textDecoration: "none",
+      color: "white",
+      fontSize: 18,
+      fontWeight: "bold",
+    }
+  };
+
+const CartWidget = () => {
+    const items = localStorage.getItem('items');
+
     return (
         <div className='shopping-cart'>
-            <img src={cart} alt="Shopping Cart"/>
-            <p>{number}</p>
+            <Link to="/shop" style={styles.linkButton}>
+                <ShoppingCartIcon />
+                <i className="fa-solid fa-cart-shopping"></i>
+                {items}
+            </Link>
         </div>
     );
 }

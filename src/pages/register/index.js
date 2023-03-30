@@ -13,7 +13,6 @@ const Register = () => {
 
     const {register, handleSubmit} = useForm();
     const onSubmit = async (data) => {
-        //console.log(data);
         const docRef = await addDoc(collection(db, "users"), {
             firstName: data.firstName,
             lastName: data.lastName,

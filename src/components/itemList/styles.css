@@ -16,3 +16,8 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+.button {
+    background-color: black;
+    color: white;
+}

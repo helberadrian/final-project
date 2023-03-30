@@ -2,7 +2,7 @@ import React from "react";
 
 import './styles.css';
 
-const ButtonShop = () => {
+const ButtonShop = ( {data} ) => {
     return (
         <div className="button">Comprar</div>
     );

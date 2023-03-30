@@ -1,6 +1,7 @@
 import React from "react";
-import CategoryMenu from "../categoryMenu/index";
 import "./style.css";
+
+import CartWidget from "../cartWidget";
 
 const NavBar = () => {
   return (
@@ -9,7 +10,7 @@ const NavBar = () => {
         <a href="/category">Categorias</a>
         <a href="/register">Registro</a>
         <a href="/contact">Contacto</a>
-
+        <CartWidget />
     </div>
   );
 };
