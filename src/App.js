@@ -14,6 +14,8 @@ import ShoppingCart from "./pages/cart";
 import Register from './pages/register';
 import CategoryDetail from './pages/categoryDetail';
 import AddProduct from './pages/addProduct';
+import CheckOut from './pages/checkout';
+import CartVoid from './pages/cartVoid';
 
 class App extends Component {
   render() {
@@ -27,9 +29,11 @@ class App extends Component {
                 <Route path='/register' element={<Register />} />
                 <Route path='/cart' element={<ShoppingCart />} />
                 <Route path='/details/:id' element={<Product />} />
-                <Route path='/category/' element={<Category />} />
+                <Route path='/category' element={<Category />} />
                 <Route path='/category/:id' element={<CategoryDetail />} />
                 <Route path='/add/:id' element={<AddProduct />} />
+                <Route path='/checkout' element={<CheckOut />} />
+                <Route path='/cartvoid' element={<CartVoid />} />
             </Routes>
           </div>
       </Router>

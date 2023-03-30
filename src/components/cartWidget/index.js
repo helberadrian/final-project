@@ -18,7 +18,7 @@ const CartWidget = () => {
 
     return (
         <div className='shopping-cart'>
-            <Link to="/shop" style={styles.linkButton}>
+            <Link to="/cart" style={styles.linkButton}>
                 <ShoppingCartIcon />
                 <i className="fa-solid fa-cart-shopping"></i>
                 {items}

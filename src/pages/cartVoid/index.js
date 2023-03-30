@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 
+import './styles.css'
+
 // Firebase
-import { collection, getDocs, query } from "firebase/firestore";
+import { doc, deleteDoc, collection, getDocs, query } from "firebase/firestore";
 import { db } from "../../db/config"
 
-import CardProduct from "../../components/cardProduct";
-import CartOptions from "../../components/cartOptions";
-
-const ShoppingCart = () => {
+const CartVoid = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -23,17 +22,17 @@ const ShoppingCart = () => {
         getProducts();
     }, []);
 
+    products.map( async (data) =>{
+        await deleteDoc(doc(db, "cart", data.id))
+    });
+
+    localStorage.setItem('items', '0');
+
     return (
-        <div>
-            <CartOptions />
-            <div className="productDetail">
-                {products.map((data) => {
-                    return (<CardProduct data={data} key={data.id}/>)
-                    })
-                } 
-            </div>
+        <div className="container">
+            <h1>Proceso de compra finalizado!!!</h1>
         </div>
     );
 };
 
-export default ShoppingCart;
+export default CartVoid;

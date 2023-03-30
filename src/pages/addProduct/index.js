@@ -44,7 +44,7 @@ const AddProduct = () => {
     } else{
         const items = Number.parseInt(itemsStorage, 10);
         const newItems = items + 1;
-        localStorage.setItem('items', newItems);
+        localStorage.setItem('items', newItems.toString());
     }
 
     return (

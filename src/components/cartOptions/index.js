@@ -6,7 +6,7 @@ const CartOptions = () => {
     return (
         <div className="container">
             <a href="/checkout">Finalizar Compra</a>
-            <a href="/cartempy">Vaciar Carrito</a>
+            <a href="/cartvoid">Vaciar Carrito</a>
         </div>
     );
 };
